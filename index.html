@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/homework.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Nicolas Morales - To Do List</title>
-</head>
-<body>
-  <header>
+  </head>
+  <body>
+    <header>
       <nav class="container_nav">
-          <h1>To do List!</h1>
+        <h1>To do List!</h1>
       </nav>
-  </header>
-   <div class="container_form">
-    <form action="" method="get">
-     <label for="">
-        <input type="number" name="" id="documento">
-         <input type="text" name="" id="usuario">
-         <input type="button" class='button' id="input_submit" onclick="crearUsuario()" value="add">
-         <input type="button" class='button' id="input_submit" onclick="mostrar()" value="ver">
+    </header>
+    <div class="container_form">
+      <form action="" method="get">
+        <label for="">
+          <input type="number" name="" id="documento" />
+          <input type="text" name="" id="usuario" />
+          <input
+            type="button"
+            class="button"
+            id="input_submit"
+            onclick="crearUsuario()"
+            value="add"
+          />
+          <input
+            type="button"
+            class="button"
+            id="input_submit"
+            onclick="mostrar()"
+            value="ver"
+          />
         </label>
-    </form>
-   </div>
-   <ul class="container_ul"  id="listado">
-    <li id="li" onclick="cambio()">Ejemplo: usuario: Nicolas Morales Dni: 45.890.678 </li>
-   </ul>
+      </form>
+    </div>
+    <ul class="container_ul" id="listado">
+      <li id="li" onclick="cambio()">
+        Ejemplo: usuario: Nicolas Morales Dni: 45.890.678
+      </li>
+    </ul>
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
