@@ -18,32 +18,33 @@ let crearUsuario = () => {
     console.groupEnd();
     
   } else {
+    
     let datosLocal = {
      nombre: usuarioEntrada.value,
-     documento: documentoEntrada.value
+     documento: documentoEntrada.value,
     };
     listado.push(datosLocal);
     localStorage.setItem('item', JSON.stringify(listado));
-    console.group();
-    console.debug(localStorage.getItem('item'));
-    console.groupEnd();
-    mostrar();
-  }
+    usuarioEntrada.value='';
+    documentoEntrada.value='';
+    documentoEntrada.onfocus;
+  };
 };
+
 
 function mostrar () {
-
     let valorLocal = localStorage.getItem('item');
-    valorLocal.forEach((intem, index ) => {
-      let usuario = usuarioEntrada.value;
-      let documento = documentoEntrada.value;
+    let valor = JSON.parse(valorLocal);
+    valor.forEach((item, index ) => {
       let itemNueva = document.createElement("li");
-      itemNueva.setAttribute("id", usuario);
+      itemNueva.setAttribute("id", index);
+      itemNueva.append(item.nombre);
+      itemNueva.append(item.documento);
       list.append(itemNueva);
-      itemNueva.append(usuario);
     });
- 
 };
+
+window.onload=mostrar;
 
 /* Funcion para eliminar la tarea */
 
