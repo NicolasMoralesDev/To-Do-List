@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/homework.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Nicolas Morales - To Do List</title>
+    <title>To Do List</title>
   </head>
   <body>
+
+      <!-- Nav -->
     <header>
       <nav class="container_nav">
         <h1>To do List!</h1>
       </nav>
     </header>
+
+    <!-- Entrada de datos  -->
+    
     <div class="container_form">
       <form action="" method="get">
         <label for="">
@@ -21,26 +26,29 @@
           <input type="text" name="" id="usuario" />
           <input
             type="button"
-            class="button"
-            id="input_submit"
+            id="button"
             onclick="crearUsuario()"
             value="add"
           />
           <input
             type="button"
-            class="button"
-            id="input_submit"
+            id="button"
             onclick="mostrar()"
             value="ver"
           />
         </label>
       </form>
     </div>
+
+    <!-- Listado -->
+
     <ul class="container_ul" id="listado">
-      <li id="li" onclick="cambio()">
-        Ejemplo: usuario: Nicolas Morales Dni: 45.890.678
+      <li  id="li">
+       usuario: Nicolas Morales Dni: 45.890.678
       </li>
     </ul>
+
+    <!-- Script -->
     <script src="./js/script.js"></script>
   </body>
 </html>

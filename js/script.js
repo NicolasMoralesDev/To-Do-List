@@ -24,7 +24,9 @@ let crearUsuario = () => {
     localStorage.setItem("item", JSON.stringify(listado));
     usuarioEntrada.value = "";
     documentoEntrada.value = "";
-    documentoEntrada.onfocus;
+    /* let nuevoSpan = document.createElement('span');
+    nuevoSpan.append('x');
+    list.append(nuevoSpan); */
   }
 };
 
