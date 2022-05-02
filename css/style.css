@@ -36,10 +36,12 @@ html{
    margin-top: 12px;
    width: auto;
    flex-direction: column;
+   margin-left: 38%;     
+
 }
 
 form {
-   margin: auto;
+  
    width: 10%;
    display: flex;
    flex-flow: column  wrap;
@@ -62,6 +64,13 @@ input{
    margin-top: 20px;
    display: flex;
    flex-flow: column wrap;
+}
+
+@media screen and  (min-width: 1100px) {
+  .container_form{
+   margin-right: 50%;     
+  }
+ 
 }
 
 .container_ul li {
