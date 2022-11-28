@@ -1,4 +1,4 @@
-# To-Do-List
+# To Do List
 
 - Creada con JavaScript vanilla
 - Desplegada en Netlifly 
