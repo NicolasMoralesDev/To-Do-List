@@ -9,8 +9,7 @@
     <title>To Do List</title>
   </head>
   <body>
-
-      <!-- Nav -->
+    <!-- Nav -->
     <header>
       <nav class="container_nav">
         <h1>To do List!</h1>
@@ -18,35 +17,41 @@
     </header>
 
     <!-- Entrada de datos  -->
-    
-    <div class="container_form">
-      <form action="" method="get">
-        <label for="">
-          <input type="number" name="" id="documento" />
-          <input type="text" name="" id="usuario" />
-          <input
-            type="button"
-            id="button"
-            onclick="crearUsuario()"
-            value="add"
-          />
-          <input
-            type="button"
-            id="button"
-            onclick="mostrar()"
-            value="ver"
-          />
-        </label>
-      </form>
-    </div>
+
+    <form action="" method="get">
+      <label for="">
+        <input
+          type="number"
+          name=""
+          id="documento"
+          required
+          placeholder="ingrese su documento"
+        />
+        <input
+          type="text"
+          name=""
+          id="usuario"
+          required
+          placeholder="ingrese su nombre"
+        />
+        <input type="button" id="button" onclick="crearUsuario()" value="add" />
+        <input
+          type="button"
+          id="button"
+          onclick="mostrar()"
+          value="ver"
+          required
+          placeholder="ingrese su dni"
+        />
+      </label>
+    </form>
 
     <!-- Listado -->
 
-    <ul class="container_ul" id="listado">
-      <li id="li">
-          Listado:
-      </li>
-    </ul>
+    <div class="container-task">
+      <h2 id="encabezado-li">Listado</h2>
+      <ul class="container_ul" id="listado"></ul>
+    </div>
 
     <!-- Script -->
     <script src="./js/script.js"></script>

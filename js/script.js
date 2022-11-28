@@ -3,18 +3,15 @@ let listado = [];
 const usuarioEntrada = document.getElementById("usuario");
 const documentoEntrada = document.getElementById("documento");
 const list = document.getElementById("listado");
-const li = document.getElementById("li");
+let valorLocal = localStorage.getItem("item");
 
 /* Crear tareas */
 
 let crearUsuario = () => {
   if (usuarioEntrada.value == "" || documentoEntrada.value == "") {
-    console.group();
-    console.debug("error");
     alert("Rellena el campo...");
     usuarioEntrada.focus();
     documentoEntrada.focus();
-    console.groupEnd();
   } else {
     let datosLocal = {
       nombre: usuarioEntrada.value,
@@ -31,20 +28,15 @@ let crearUsuario = () => {
 };
 
 /* Mostrar los datos cargados en la lista */
+valorLocal = localStorage.getItem("item");
 
-function mostrar() {
-  let valorLocal = localStorage.getItem("item");
-  let valor = JSON.parse(valorLocal);
-  valor.forEach((item, index) => {
-    let itemNueva = document.createElement("li");
-    itemNueva.setAttribute("id", index);
-    itemNueva.append(item.nombre);
-    itemNueva.append(item.documento);
-    list.append(itemNueva);
-  });
-}
-
-window.onload = mostrar;
+let valor = JSON.parse(valorLocal);
+valor.forEach((item, index) => {
+  let contenedor = document.createElement("li");
+  let data = `NOMBRE: ${item.nombre} DNI: ${item.documento}`;
+  contenedor.innerHTML = data;
+  list.appendChild(contenedor);
+});
 
 /* Funcion para eliminar la tarea */
 
