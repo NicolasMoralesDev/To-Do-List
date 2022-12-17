@@ -3,7 +3,6 @@ let listado = [];
 const usuarioEntrada = document.getElementById("usuario");
 const documentoEntrada = document.getElementById("documento");
 const list = document.getElementById("listado");
-let valorLocal = localStorage.getItem("item");
 
 /* Crear tareas */
 
@@ -24,11 +23,21 @@ let crearUsuario = () => {
     /* let nuevoSpan = document.createElement('span');
     nuevoSpan.append('x');
     list.append(nuevoSpan); */
+    let valorLocal = localStorage.getItem("item");
+
+let valor = JSON.parse(valorLocal);
+valor.forEach((item, index) => {
+  let contenedor = document.createElement("li");
+  let data = `NOMBRE: ${item.nombre} DNI: ${item.documento}`;
+  contenedor.innerHTML = data;
+  list.appendChild(contenedor);
+});
+
   }
 };
 
 /* Mostrar los datos cargados en la lista */
-valorLocal = localStorage.getItem("item");
+let valorLocal = localStorage.getItem("item");
 
 let valor = JSON.parse(valorLocal);
 valor.forEach((item, index) => {

@@ -54,7 +54,12 @@ form {
   margin-top: 12px;
   flex-flow: wrap column;
   max-width: 23%;
-  margin-left: 39%;
+}
+
+.form-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 input {
@@ -82,10 +87,24 @@ input {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 1100px) {
-  .container_form {
-    margin-right: 50%;
+@media  (max-width: 1100px) {
+
+  .container-task {
+    min-width: 50%;
+
   }
+
+  form {
+    min-width: 50%;
+    justify-items: center;
+
+  }
+
+  li {
+    min-height: 6em;
+    
+  }
+
 }
 
 .container_ul li {
